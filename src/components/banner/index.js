@@ -46,74 +46,72 @@ const Banner = ({ headerHeight }) => {
   };
 
   return (
-    <div className="banner">
-      <Container>
-        <Row
-          className="d-flex justify-content-center align-items-center"
-          style={{ minHeight: `calc(100vh - ${headerHeight}px)` }}
-        >
-          <Col xs={12} lg={6}>
-            <h1 className="fw-bold mb-4 banner-title text-center text-lg-start">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
-              at cupiditate dolorum ducimus fugiat, fugit magnam mollitia quam
-              sunt velit!
-            </h1>
-            {blockchain.account === "" || blockchain.smartContract === null ? (
-              <div className="d-flex justify-content-center justify-content-lg-start align-items-center">
-                <Button
-                  label="Connect"
-                  onClick={(e) => handleConnectMintBox(e)}
-                />
-              </div>
-            ) : (
-              <></>
-            )}
-          </Col>
-          <Col xs={12} lg={6}>
-            {blockchain.errorMsg ? (
-              <Alert variant="danger">{blockchain.errorMsg}</Alert>
-            ) : (
-              <></>
-            )}
-            {blockchain.account === "" || blockchain.smartContract === null ? (
-              <div className="banner-image">
-                {bannerImages.map((image) => (
-                  <div key={image} className="banner-image__container">
-                    <div key={image} className="banner-image__wrapper">
-                      <img src={image} alt="vs-character-image" />
-                    </div>
+    <Container>
+      <Row
+        className="d-flex justify-content-center align-items-center"
+        style={{ minHeight: `calc(100vh - ${headerHeight}px)` }}
+      >
+        <Col xs={12} lg={6}>
+          <h1 className="fw-bold mb-4 banner-title text-center text-lg-start">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at
+            cupiditate dolorum ducimus fugiat, fugit magnam mollitia quam sunt
+            velit!
+          </h1>
+          {blockchain.account === "" || blockchain.smartContract === null ? (
+            <div className="d-flex justify-content-center justify-content-lg-start align-items-center">
+              <Button
+                label="Connect"
+                onClick={(e) => handleConnectMintBox(e)}
+              />
+            </div>
+          ) : (
+            <></>
+          )}
+        </Col>
+        <Col xs={12} lg={6}>
+          {blockchain.errorMsg ? (
+            <Alert variant="danger">{blockchain.errorMsg}</Alert>
+          ) : (
+            <></>
+          )}
+          {blockchain.account === "" || blockchain.smartContract === null ? (
+            <div className="banner-image">
+              {bannerImages.map((image) => (
+                <div key={image} className="banner-image__container">
+                  <div key={image} className="banner-image__wrapper">
+                    <img src={image} alt="vs-character-image" />
                   </div>
-                ))}
-              </div>
-            ) : (
-              <>
-                {isShowMintBox ? (
-                  <>
-                    {countdownTimer === 0 ? (
-                      <MintBox />
-                    ) : (
-                      <div className="text-center">
-                        <h6 className="fw-bold fs-1">{countdownTimer}</h6>
-                        <ProgressBar now={100 / countdownTimer} />
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Alert variant="success">
-                    We allow our community to win 50k $ and Airdrops worth 3- 4
-                    ETH from the Verseshoe brand simply by selling VS Characters
-                    over 5 ETH. Remember that you will still receive an Airdrop
-                    if you listed the VS Character 5 ETH or more but couldn’t
-                    sell it. If you do not list it over 5 ETH, you will miss
-                    many significant opportunities from the Verseshoe brand.
-                  </Alert>
-                )}
-              </>
-            )}
-          </Col>
-        </Row>
-      </Container>
-    </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              {isShowMintBox ? (
+                <>
+                  {countdownTimer === 0 ? (
+                    <MintBox />
+                  ) : (
+                    <div className="text-center">
+                      <h6 className="fw-bold fs-1">{countdownTimer}</h6>
+                      <ProgressBar now={100 / countdownTimer} />
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Alert variant="success">
+                  We allow our community to win 50k $ and Airdrops worth 3- 4
+                  ETH from the Verseshoe brand simply by selling VS Characters
+                  over 5 ETH. Remember that you will still receive an Airdrop if
+                  you listed the VS Character 5 ETH or more but couldn’t sell
+                  it. If you do not list it over 5 ETH, you will miss many
+                  significant opportunities from the Verseshoe brand.
+                </Alert>
+              )}
+            </>
+          )}
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

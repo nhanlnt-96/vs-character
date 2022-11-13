@@ -8,3 +8,10 @@ body {
   font-size: 20px;
   color: #ffffff;
 }
+
+.main {
+  &-content {
+    background: url("../assets/images/bannerBg.jpg") no-repeat center;
+    background-size: cover;
+  }
+}

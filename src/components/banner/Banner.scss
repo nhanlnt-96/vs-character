@@ -1,7 +1,4 @@
 .banner {
-  background: url("../../assets/images/bannerBg.jpg") no-repeat center;
-  background-size: cover;
-
   &-title {
     font-size: clamp(24px, 5vw, 46px);
   }

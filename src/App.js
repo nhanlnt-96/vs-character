@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Header from "./components/header";
 import Banner from "./components/banner";
+import Roadmap from "./components/roadmap";
 
 function App() {
   const headerRef = useRef(null);
@@ -20,7 +21,10 @@ function App() {
   return (
     <>
       <Header ref={headerRef} />
-      <Banner headerHeight={headerHeight} />
+      <div className="main-content">
+        <Banner headerHeight={headerHeight} />
+        <Roadmap />
+      </div>
     </>
   );
 }
