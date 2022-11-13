@@ -5,7 +5,7 @@ const Button = ({ className = "", label, onClick, ...props }) => {
   return (
     <button
       className={`button-container ${className}`}
-      onClick={onClick}
+      onClick={(e) => onClick(e)}
       {...props}
     >
       {label}

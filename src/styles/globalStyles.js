@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-// Used for wrapping a page component
-export const Screen = styled.div`
-  background-color: var(--primary);
-  background-image: ${({ image }) => (image ? `url(${image})` : "none")};
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
-
 // Used for providing space between components
 export const SpacerXSmall = styled.div`
   height: 8px;
@@ -28,12 +16,6 @@ export const SpacerSmall = styled.div`
 export const SpacerMedium = styled.div`
   height: 24px;
   width: 24px;
-`;
-
-// Used for providing space between components
-export const SpacerLarge = styled.div`
-  height: 32px;
-  width: 32px;
 `;
 
 // Used for providing a wrapper around a component
@@ -57,20 +39,8 @@ export const TextTitle = styled.p`
   line-height: 1.6;
 `;
 
-export const TextSubTitle = styled.p`
-  color: var(--primary-text);
-  font-size: 18px;
-  line-height: 1.6;
-`;
-
 export const TextDescription = styled.p`
   color: var(--primary-text);
   font-size: 16px;
   line-height: 1.6;
-`;
-
-export const StyledClickable = styled.div`
-  :active {
-    opacity: 0.6;
-  }
 `;
