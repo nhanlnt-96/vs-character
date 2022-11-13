@@ -21,7 +21,7 @@ export const social = [
   },
   {
     label: "instagram",
-    url: "https://mobile.twitter.com/Verseshoe",
+    url: "https://www.instagram.com/verseshoesofficial/",
     icon: InstagramIcon,
   },
 ];
