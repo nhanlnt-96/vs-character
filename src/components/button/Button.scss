@@ -1,0 +1,19 @@
+@import "src/styles/index";
+
+.button {
+  &-container {
+    outline: none;
+    border: none;
+    background-color: $blood-orange;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 6px 24px;
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+    width: fit-content;
+
+    &:hover {
+      background-color: $crimson;
+    }
+  }
+}

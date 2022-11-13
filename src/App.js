@@ -1,8 +1,14 @@
 import React from "react";
 import MintBox from "./components/mintBox";
+import Header from "./components/header";
 
 function App() {
-  return <MintBox />;
+  return (
+    <>
+      <Header />
+      <MintBox />
+    </>
+  );
 }
 
 export default App;

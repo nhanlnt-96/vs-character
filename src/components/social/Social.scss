@@ -1,0 +1,11 @@
+.social {
+  &-container {
+    .nav-link {
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+  }
+}

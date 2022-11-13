@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
 @import "breakpoints";
+@import "variables";
 
-html {
-  font-family: 'Nunito', sans-serif;
+body {
+  font-family: 'Stint Ultra Condensed', cursive;
   font-weight: 400;
+  font-size: 20px;
 }
