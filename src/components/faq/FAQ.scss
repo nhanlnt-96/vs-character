@@ -1,0 +1,56 @@
+@import "../../styles/index";
+
+.faq {
+  &-title {
+    font-size: clamp(36px, 5vw, 46px);
+  }
+
+  .accordion {
+    &-item {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $dark-red;
+      color: #ffffff;
+
+      &:last-of-type {
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+
+        .accordion-button.collapsed {
+          border-bottom-left-radius: unset;
+          border-bottom-right-radius: unset;
+        }
+      }
+    }
+
+    &-button {
+      font-size: 25px;
+      background-color: transparent;
+      color: #ffffff;
+
+      &:after {
+        content: unset;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-color: $blood-orange;
+      }
+
+      &:not(.collapsed) {
+        background-color: $blood-orange;
+        color: #ffffff;
+
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+}
