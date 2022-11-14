@@ -6,21 +6,25 @@ import { roadmaps } from "./configs";
 const Roadmap = () => {
   return (
     <Container id="roadmap" className="py-4 py-lg-5">
-      <h2 className="mb-2 text-uppercase fw-bold text-center fs-1">Roadmap</h2>
-      <Row>
-        <Col md={12}>
-          <div className="main-timeline">
-            {roadmaps.map((roadmap) => (
-              <div key={roadmap.title} className="timeline">
-                <a href="" className="timeline-content">
-                  <h3 className="title">{roadmap.title}</h3>
-                  <p className="description">{roadmap.description}</p>
-                </a>
-              </div>
-            ))}
+      <h2 className="mb-2 text-uppercase fw-bold text-center">Roadmap</h2>
+      <div className="content">
+        <div className="process">
+          <div className="container">
+            <div className="roadmap-container">
+              <ul className="row">
+                {roadmaps.map((roadmap) => (
+                  <li key={roadmap.description}>
+                    <div className="media-body">
+                      <h4>{roadmap.title}</h4>
+                      <p>{roadmap.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </Container>
   );
 };
