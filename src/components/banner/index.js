@@ -52,10 +52,16 @@ const Banner = ({ headerHeight }) => {
         style={{ minHeight: `calc(100vh - ${headerHeight}px)` }}
       >
         <Col xs={12} lg={6}>
-          <h1 className="fw-bold mb-4 banner-title text-center text-lg-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at
-            cupiditate dolorum ducimus fugiat, fugit magnam mollitia quam sunt
-            velit!
+          <h1 className="mb-4 banner-title text-center text-lg-start">
+            Verseshoe, we design fabulous animated shoe collections in the NFT
+            space and the real world. Our goal is to allow our community to
+            receive unlimited benefits from these mind-blowing shoes. The brand
+            provides the holders of these fantasy shoes to bring their
+            Verse-shoe NFTs to life and wear them. The only way to get one of
+            these golden shoes is to own one NFT from our first drop, “VS
+            Character” ( Coming soon). The profits from this collection go to
+            charity. We don’t limit the brand only there; many upcoming
+            Metaverse games (where you play to earn) and events are yet to come
           </h1>
           {blockchain.account === "" || blockchain.smartContract === null ? (
             <div className="d-flex justify-content-center justify-content-lg-start align-items-center">
