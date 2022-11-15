@@ -33,5 +33,9 @@
     &:focus {
       box-shadow: none !important;
     }
+
+    .navbar-toggler-icon {
+      background-image: url("../../assets/images/icons/hamburger.png");
+    }
   }
 }

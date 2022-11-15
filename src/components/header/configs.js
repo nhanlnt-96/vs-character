@@ -8,6 +8,10 @@ export const headerMenu = [
     path: "#roadmap",
   },
   {
+    label: "Team",
+    path: "#team",
+  },
+  {
     label: "FAQ",
     path: "#faq",
   },

@@ -1,0 +1,75 @@
+@import "../../styles/index";
+
+#team {
+  & > h2 {
+    font-size: clamp(36px, 5vw, 46px);
+  }
+}
+
+.team {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &-card {
+    padding: 12px;
+    border: 1px solid $crimson;
+    border-radius: 10px;
+    background-color: rgba(220, 20, 60, .2);
+    cursor: pointer;
+    width: calc(100% / 1 - 24px);
+    @include tablet {
+      width: calc(100% / 2 - 24px);
+    }
+    @include desktop {
+      width: calc(100% / 3 - 24px);
+    }
+    @include wide-desktop {
+      width: calc(100% / 4 - 24px);
+    }
+
+    &:hover {
+      .team-card__image {
+        & > img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+      padding-bottom: 100%;
+      position: relative;
+      overflow: hidden;
+
+      & > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        transition: all .2s ease-in-out;
+      }
+    }
+
+    &__name {
+      margin: 12px 0;
+
+      & > h6 {
+        font-weight: bold;
+        text-align: center;
+        font-size: clamp(20px, 5vw, 25px);
+      }
+
+      & > p {
+        font-size: clamp(18px, 5vw, 20px);
+        text-align: center;
+      }
+    }
+  }
+}

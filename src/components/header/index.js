@@ -8,6 +8,7 @@ import Logo from "../../assets/images/logo.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../redux/data/dataActions";
 import { connect } from "../../redux/blockchain/blockchainActions";
+import { social } from "../social/configs";
 
 const Header = forwardRef((props, ref) => {
   const dispatch = useDispatch();
@@ -47,7 +48,7 @@ const Header = forwardRef((props, ref) => {
           </Nav>
           <Nav>
             <div className="d-flex justify-content-center align-items-center mt-3 mt-lg-0 me-2">
-              <Social />
+              <Social socialData={social} />
             </div>
             {blockchain.account === "" || blockchain.smartContract === null ? (
               <div className="d-flex justify-content-center align-items-center mt-3 mt-lg-0">

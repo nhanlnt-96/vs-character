@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Banner from "./components/banner";
 import Roadmap from "./components/roadmap";
 import FAQ from "./components/faq";
+import Team from "./components/team";
 
 function App() {
   const headerRef = useRef(null);
@@ -25,6 +26,7 @@ function App() {
       <div className="main-content">
         <Banner headerHeight={headerHeight} />
         <Roadmap />
+        <Team/>
         <FAQ />
       </div>
     </>

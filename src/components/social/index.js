@@ -1,12 +1,11 @@
 import React from "react";
-import { social } from "./configs";
 import { NavLink } from "react-bootstrap";
 import "./Social.scss";
 
-const Social = () => {
+const Social = ({ socialData }) => {
   return (
     <div className="d-flex justify-content-center align-items-center social-container">
-      {social.map(
+      {socialData.map(
         (socialItem) =>
           socialItem.url && (
             <NavLink

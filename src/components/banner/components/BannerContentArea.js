@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../../redux/data/dataActions";
 import { connect } from "../../../redux/blockchain/blockchainActions";
 import Social from "../../social";
+import { social } from "../../social/configs";
 
 export const BannerContentArea = () => {
   const dispatch = useDispatch();
@@ -53,7 +54,7 @@ export const BannerContentArea = () => {
         ) : (
           <></>
         )}
-        <Social />
+        <Social socialData={social} />
       </div>
     </Col>
   );
